@@ -11,7 +11,7 @@
 LOG_DIR="log"
 if [ ! -d "$LOG_DIR" ]; then
     sudo mkdir -p log
-    sudo dd if=/dev/zero of=log.img bs=1M count=512
+    sudo dd if=/dev/zero of=log.img bs=1M count=1024
     sudo mkfs.ext4 log.img
     sudo mount -o loop log.img log
 
